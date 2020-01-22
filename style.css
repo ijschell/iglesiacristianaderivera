@@ -20,7 +20,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Calistoga|Lobster&display=swap");
 *:focus {
   outline: initial !important;
 }
@@ -38,7 +38,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .btn.btn-purpure {
-  background-color: #9c27b0 !important;
+  background-color: #ac4354 !important;
 }
 
 .btn.btn-dark {
@@ -54,10 +54,9 @@ body {
   padding: 0;
   margin: 0;
   background: #f8f8f8;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
+  font-family: 'Calistoga', cursive;
+  font-size: 17px;
+  line-height: 27px;
   overflow-x: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -243,6 +242,16 @@ footer .container-fluid .black .bottom p {
           justify-content: space-between;
   position: relative;
   z-index: 10;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  #contnetOngs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 #contnetOngs .ong {
@@ -252,6 +261,20 @@ footer .container-fluid .black .bottom p {
   padding: 15px;
   text-align: center;
   color: #fff;
+}
+
+@media (max-width: 1100px) {
+  #contnetOngs .ong {
+    width: calc(50% - 80px);
+    margin: 0 25px 15px 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  #contnetOngs .ong {
+    width: 100%;
+    margin: 0 25px 15px 25px;
+  }
 }
 
 #contnetOngs .ong .icon img {
@@ -310,8 +333,23 @@ footer .container-fluid .black .bottom p {
           align-items: center;
 }
 
+@media (max-width: 450px) {
+  #contnetPastor .pastor .container-fluid {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 30px;
+    width: initial;
+  }
+}
+
 #contnetPastor .pastor .container-fluid .left {
   width: 50%;
+}
+
+@media (max-width: 450px) {
+  #contnetPastor .pastor .container-fluid .left {
+    width: 100%;
+  }
 }
 
 #contnetPastor .pastor .container-fluid .left .image {
@@ -333,13 +371,32 @@ footer .container-fluid .black .bottom p {
   padding-left: 25px;
 }
 
+@media (max-width: 450px) {
+  #contnetPastor .pastor .container-fluid .right {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
 #contnetPastor .pastor .container-fluid .right .title h4 {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 35px;
+}
+
+@media (max-width: 450px) {
+  #contnetPastor .pastor .container-fluid .right .title h4 {
+    line-height: 25px;
+  }
 }
 
 #contnetPastor .pastor .container-fluid .right .btn {
   margin-top: 15px;
+}
+
+@media (max-width: 450px) {
+  #contnetPastor .pastor .container-fluid .right .btn {
+    margin: 15px auto 0 auto;
+  }
 }
 
 #singlePage {
@@ -669,7 +726,7 @@ footer .container-fluid .black .bottom p {
 }
 
 #containerContact .container-fluid .left .casaPaz:nth-child(4) {
-  background: #9c27b0;
+  background: #ac4354;
 }
 
 #containerContact .container-fluid .left .casaPaz:nth-child(5) {
@@ -887,10 +944,26 @@ footer .container-fluid .black .bottom p {
           justify-content: start;
 }
 
+@media (max-width: 450px) {
+  #contnetEvents .container-fluid > div {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 15px;
+  }
+}
+
 #contnetEvents .container-fluid > div .left {
   width: calc(50% - 1px);
   border-right: solid 1px rgba(255, 255, 255, 0.2);
   padding: 0 30px 0 0;
+}
+
+@media (max-width: 450px) {
+  #contnetEvents .container-fluid > div .left {
+    width: 100%;
+    border-right: none;
+    padding: 0;
+  }
 }
 
 #contnetEvents .container-fluid > div .left .item {
@@ -924,6 +997,12 @@ footer .container-fluid .black .bottom p {
   line-height: 36px;
 }
 
+@media (max-width: 768px) {
+  #contnetEvents .container-fluid > div .left .item .date {
+    line-height: 19px;
+  }
+}
+
 #contnetEvents .container-fluid > div .left .item .date a {
   color: #fff;
   text-decoration: none;
@@ -931,6 +1010,18 @@ footer .container-fluid .black .bottom p {
 
 #contnetEvents .container-fluid > div .left .item h4 {
   padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  #contnetEvents .container-fluid > div .left .item h4 {
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 450px) {
+  #contnetEvents .container-fluid > div .left .item h4 {
+    width: 150px;
+  }
 }
 
 #contnetEvents .container-fluid > div .left .item h4 a {
@@ -941,6 +1032,19 @@ footer .container-fluid .black .bottom p {
 #contnetEvents .container-fluid > div .right {
   width: 50%;
   padding: 0 0 0 30px;
+}
+
+@media (max-width: 450px) {
+  #contnetEvents .container-fluid > div .right {
+    padding: 30px 0 0 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  #contnetEvents .container-fluid > div .right > p {
+    font-weight: bold;
+  }
 }
 
 #contnetEvents .container-fluid > div .right .item {
@@ -969,9 +1073,23 @@ footer .container-fluid .black .bottom p {
   height: 100px;
 }
 
+@media (max-width: 768px) {
+  #contnetEvents .container-fluid > div .right .item span {
+    font-size: 70px;
+    width: 70px;
+    height: 70px;
+  }
+}
+
 #contnetEvents .container-fluid > div .right .item .date {
   padding: 0 15px;
   line-height: 36px;
+}
+
+@media (max-width: 768px) {
+  #contnetEvents .container-fluid > div .right .item .date {
+    line-height: 19px;
+  }
 }
 
 #contnetEvents .container-fluid > div .right .item .date a {
@@ -981,6 +1099,12 @@ footer .container-fluid .black .bottom p {
 
 #contnetEvents .container-fluid > div .right .item h4 {
   padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  #contnetEvents .container-fluid > div .right .item h4 {
+    line-height: 19px;
+  }
 }
 
 #contnetEvents .container-fluid > div .right .item h4 a {
@@ -1008,5 +1132,37 @@ footer .container-fluid .black .bottom p {
       -ms-flex-align: center;
           align-items: center;
   text-align: right;
+}
+
+#radioOnline {
+  position: fixed;
+  background: #fff;
+  padding: 4px 0px 4px 4px;
+  bottom: 0;
+  left: 0;
+}
+
+#radioOnline .icon {
+  position: absolute;
+  right: -28px;
+  top: 0;
+  padding: 5px;
+  border-radius: 50%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+}
+
+#radioOnline .icon span {
+  font-size: 21px;
+  margin: auto;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Lobster', cursive;
 }
 /*# sourceMappingURL=style.css.map */

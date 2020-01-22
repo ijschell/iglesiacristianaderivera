@@ -14,6 +14,12 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                 'type'  => 'textarea'
             ),
             array(
+                'name'  => 'Icono',
+                'desc'  => 'Inserte el icono aquí',
+                'id'    => 'icon',
+                'type'  => 'image'
+            ),
+            array(
                 'name'        => 'Seleccione página perteneciente',
                 'id'          => 'page',
                 'type'        => 'post',
@@ -38,6 +44,20 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                 'desc'  => 'Más o menos 150 carácteres',
                 'id'    => 'short_description',
                 'type'  => 'textarea'
+            ),
+        )
+    );
+
+    $meta_boxes[] = array(
+        'title'      => 'Link a radio',
+        'post_types' => 'radio_online',
+
+        'fields' => array(
+            array(
+                'name'  => 'Link a radio online',
+                'desc'  => 'Inserte aquí el enlace a la radio online.',
+                'id'    => 'radio_field',
+                'type'  => 'text'
             ),
         )
     );

@@ -57,6 +57,33 @@
     </div>
 </footer>
 
+<div id="radioOnline">
+    <div class="reproductor">
+        <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+        <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+        <script type="text/javascript">
+        MRP.insert({
+            'url':'http://server.laradio.online:9114/',
+            'lang':'es',
+            'codec':'aac',
+            'volume':100,
+            'autoplay':true,
+            'jsevents':true,
+            'buffering':0,
+            'title':'Iglesia Cristiana de Rivera',
+            'wmode':'transparent',
+            'skin':'faredirfare',
+            'width':269,
+            'height':52
+        });
+        </script>
+        <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+    </div>
+    <div class="icon">
+        <!-- <span class="dashicons dashicons-controls-volumeon"></span> -->
+    </div>
+</div>
+
 <a id="scrollToTop" href="<?php echo get_site_url() ?>/#header" class="tooltip" title="Ir arriba">
     <img src="<?php echo get_template_directory_uri() ?>/assets/images/boton-de-carga.png" alt="">
 </a>

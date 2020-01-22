@@ -48,7 +48,7 @@
 						<a href="<?php echo get_site_url() ?>/#contnetGalleryHome">Galería</a>
 					</li>
 					<li>
-						<a href="<?php echo get_site_url() ?>/#contnetOracion">Oración</a>
+						<a href="<?php echo get_site_url() ?>/radio">Rádio</a>
 					</li>
 				</ul>
 			</div>
