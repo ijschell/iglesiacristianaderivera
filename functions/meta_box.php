@@ -72,13 +72,13 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                 'desc'  => 'Tamaño óptimo aprox. 800px x 800px',
                 'id'    => 'images_home',
                 'type'  => 'image_advanced'
-            ),
-            array(
-                'name'  => 'Todas las imágenes',
-                'desc'  => 'Tamaño óptimo aprox. 800px x 800px',
-                'id'    => 'all_images',
-                'type'  => 'image_advanced'
-            ),
+            )
+            // array(
+            //     'name'  => 'Todas las imágenes',
+            //     'desc'  => 'Tamaño óptimo aprox. 800px x 800px',
+            //     'id'    => 'all_images',
+            //     'type'  => 'image_advanced'
+            // ),
         ),
         
     );

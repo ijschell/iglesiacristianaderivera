@@ -52,5 +52,31 @@
 					</li>
 				</ul>
 			</div>
+
+			<div id="menuMobile">
+
+				<div class="menu">
+					<span></span>
+				</div>
+
+				<nav class="navbar-menu">
+					<ul class="menu-listing">
+						<li>
+							<a href="<?php echo get_site_url() ?>/#header" class="active">Inicio</a>
+						</li>
+						<li>
+							<a href="<?php echo get_site_url() ?>/nuestra-mision">Nuestra misión</a>
+						</li>
+						<li>
+							<a href="<?php echo get_site_url() ?>/#contnetGalleryHome">Galería</a>
+						</li>
+						<li>
+							<a href="<?php echo get_site_url() ?>/radio">Rádio</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+
 		</div>
 	</header>

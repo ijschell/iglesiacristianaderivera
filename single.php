@@ -83,14 +83,27 @@ if($data["post"]->post_type != "galeria_imagenes"){
 
                 <?php 
                 $site_url = get_site_url();
-                foreach ($data["fields"]["images_home"] as $key => $value) {
-                    $image_data = wp_get_attachment_metadata($value);
-                    $image = $site_url . "/wp-content/uploads/" . $image_data["file"];
-                    ?>
-                    <div class="image" style="background-image: url(<?php echo $image  ?>)">
-                        <a data-fancybox="gallery" href="<?php echo $image  ?>"></a>
-                    </div>
-                    <?php
+                if($data["fields"]["images_home"] != NULL){
+                    foreach ($data["fields"]["images_home"] as $key => $value) {
+                        $image_data = wp_get_attachment_metadata($value);
+                        $image = $site_url . "/wp-content/uploads/" . $image_data["file"];
+                        ?>
+                        <div class="image" style="background-image: url(<?php echo $image  ?>)">
+                            <a data-fancybox="gallery" href="<?php echo $image  ?>"></a>
+                        </div>
+                        <?php
+                    }
+                }
+                if($data["fields"]["all_images"] != NULL){
+                    foreach ($data["fields"]["all_images"] as $key => $value) {
+                        $image_data = wp_get_attachment_metadata($value);
+                        $image = $site_url . "/wp-content/uploads/" . $image_data["file"];
+                        ?>
+                        <div class="image" style="background-image: url(<?php echo $image  ?>)">
+                            <a data-fancybox="gallery" href="<?php echo $image  ?>"></a>
+                        </div>
+                        <?php
+                    }
                 }
                 ?>
 

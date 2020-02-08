@@ -135,6 +135,12 @@ header .container-fluid .right #menu {
   display: flex;
 }
 
+@media (max-width: 804px) {
+  header .container-fluid .right #menu {
+    display: none;
+  }
+}
+
 header .container-fluid .right #menu li {
   margin: 10px;
   list-style: none;
@@ -379,7 +385,7 @@ footer .container-fluid .black .bottom p {
 }
 
 #contnetPastor .pastor .container-fluid .right .title h4 {
-  font-size: 20px;
+  font-size: 26px;
   line-height: 35px;
 }
 
@@ -444,17 +450,32 @@ footer .container-fluid .black .bottom p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 50px;
 }
 
+#singlePage .container-fluid .contentGallery .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 #singlePage .container-fluid .contentGallery .image {
-  width: 33%;
+  width: 32%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  margin-bottom: 20px;
 }
 
 #singlePage .container-fluid .contentGallery .image:after {
@@ -568,10 +589,13 @@ footer .container-fluid .black .bottom p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #contnetGalleryHome .gallery .images > div {
-  width: 33%;
+  width: 22%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1164,5 +1188,142 @@ footer .container-fluid .black .bottom p {
 
 h2, h3, h4, h5 {
   font-family: 'Lobster', cursive;
+}
+
+#menuMobile .navbar-menu {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menuMobile .navbar-menu.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menuMobile .navbar-menu .menu-listing {
+  padding: 50px 0 0 0;
+  margin: 0;
+  text-align: right;
+}
+
+#menuMobile .menu-listing li {
+  display: block;
+  text-align: center;
+}
+
+#menuMobile .menu-listing li a {
+  background-color: #fff;
+  color: #262626;
+  display: block;
+  font-size: 1rem;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menuMobile .menu-listing li a:hover {
+  background-color: #262626;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menuMobile .menu {
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  background-color: #262626;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 9999;
+  display: none;
+}
+
+@media (max-width: 804px) {
+  #menuMobile .menu {
+    display: block;
+  }
+}
+
+#menuMobile .menu span {
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#menuMobile .menu span:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#menuMobile .menu span:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#menuMobile .menu.active span {
+  background-color: transparent;
+}
+
+#menuMobile .menu.active span:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+#menuMobile .menu.active span:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+}
+
+@media only screen and (max-width: 804px) {
+  .navbar-menu {
+    height: 100%;
+    z-index: 1;
+    background: #fff;
+  }
+  .menu-listing li {
+    display: block;
+  }
+  .navbar-menu .menu-listing {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

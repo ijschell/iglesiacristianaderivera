@@ -256,3 +256,13 @@ function animationHeader(){
     })
 
 }
+
+$("#menuMobile .menu").click(function() {
+    $("#menuMobile .menu").toggleClass("active");
+    $("#menuMobile .navbar-menu").toggleClass("active");
+});
+
+$(".menu-listing li a").click(function() {
+    $("#menuMobile .menu").removeClass("active");
+    $("#menuMobile .navbar-menu").removeClass("active");
+})

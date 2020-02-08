@@ -119,6 +119,10 @@ class SaveWorld{
 
     }
 
+    mobileMenu(){
+        
+    }
+
 }
 
 $(document).ready(function(){
@@ -157,5 +161,7 @@ $(document).ready(function(){
 
     // toggle class sidebar
     saveWorld.toggleSidebar();
+
+    
 
 })

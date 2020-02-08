@@ -5,17 +5,20 @@ function get_home_gallery(){
 
     $posts = get_posts(array(
         "post_type"     =>      "galeria_imagenes",
-        "numberposts"   =>      1,
+        "numberposts"   =>      4,
         "post_status"   =>      "publish"
     ));
 
     foreach ($posts as $key => $value) {
 
         $images = array();
+        // $image = get_post_meta( $value->ID, "images_home", false )[0];
 
         foreach (get_post_meta( $value->ID, "images_home", false ) as $key => $image) {
             
             array_push($images, wp_get_attachment_metadata($image));
+
+            break;
 
         }
         
