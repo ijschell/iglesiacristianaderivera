@@ -74,7 +74,13 @@ function initSliderLibro(){
         autoplay : true,
         pauseOnFocus : false,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive : [{
+            breakpoint: 550,
+            settings : {
+                slidesToShow: 2
+            }
+        }]
     })
 
 }
@@ -99,7 +105,13 @@ function initSliderTransmision(){
         arrows : false,
         fade : false,
         autoplay : true,
-        slidesToShow : 3
+        slidesToShow : 3,
+        responsive : [{
+            breakpoint : 550,
+            settings : {
+                slidesToShow : 1,
+            }
+        }]
     })
 
 }

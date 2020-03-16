@@ -20,7 +20,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-@import url("https://fonts.googleapis.com/css?family=Calistoga|Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
 *:focus {
   outline: initial !important;
 }
@@ -31,6 +32,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   color: #fff !important;
   border: none !important;
   display: table;
+}
+
+@media (max-width: 550px) {
+  .btn {
+    padding: 11px 17px !important;
+  }
 }
 
 .btn.btn-success {
@@ -54,13 +61,20 @@ body {
   padding: 0;
   margin: 0;
   background: #f8f8f8;
-  font-family: 'Calistoga', cursive;
-  font-size: 17px;
-  line-height: 27px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 19px;
+  line-height: 29px;
   overflow-x: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 body.active {
@@ -119,6 +133,13 @@ header .container-fluid {
           align-items: center;
 }
 
+@media (max-width: 1024px) {
+  header .container-fluid {
+    padding: 0 25px;
+    width: calc(100% - 50px);
+  }
+}
+
 header .container-fluid .left h1 {
   margin: 0;
 }
@@ -135,7 +156,7 @@ header .container-fluid .right #menu {
   display: flex;
 }
 
-@media (max-width: 804px) {
+@media (max-width: 550px) {
   header .container-fluid .right #menu {
     display: none;
   }
@@ -222,6 +243,12 @@ footer .container-fluid .black .bottom p {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  #sliderHeader .slide {
+    height: calc(80vh - 100px);
+  }
+}
+
 #sliderHeader .slide .center {
   margin: 10% auto;
   text-align: center;
@@ -229,11 +256,23 @@ footer .container-fluid .black .bottom p {
 }
 
 #sliderHeader .slide .center h3 {
-  font-size: 45px;
+  font-size: 47px;
+}
+
+@media (max-width: 550px) {
+  #sliderHeader .slide .center h3 {
+    font-size: 27px;
+  }
 }
 
 #sliderHeader .slide .center .description {
   font-size: 30px;
+}
+
+@media (max-width: 550px) {
+  #sliderHeader .slide .center .description {
+    font-size: 16px;
+  }
 }
 
 #contnetOngs {
@@ -260,6 +299,18 @@ footer .container-fluid .black .bottom p {
   }
 }
 
+@media (max-width: 768px) {
+  #contnetOngs {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  #contnetOngs {
+    padding-top: 25px;
+  }
+}
+
 #contnetOngs .ong {
   width: calc(100% / 5);
   max-height: 350px;
@@ -276,7 +327,7 @@ footer .container-fluid .black .bottom p {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetOngs .ong {
     width: 100%;
     margin: 0 25px 15px 25px;
@@ -294,6 +345,7 @@ footer .container-fluid .black .bottom p {
 
 #contnetOngs .ong .shortDescription {
   padding-bottom: 15px;
+  font-size: 17px;
 }
 
 #contnetOngs .ong .link {
@@ -339,7 +391,7 @@ footer .container-fluid .black .bottom p {
           align-items: center;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetPastor .pastor .container-fluid {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -352,7 +404,7 @@ footer .container-fluid .black .bottom p {
   width: 50%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetPastor .pastor .container-fluid .left {
     width: 100%;
   }
@@ -377,7 +429,7 @@ footer .container-fluid .black .bottom p {
   padding-left: 25px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetPastor .pastor .container-fluid .right {
     width: 100%;
     padding-left: 0;
@@ -385,13 +437,14 @@ footer .container-fluid .black .bottom p {
 }
 
 #contnetPastor .pastor .container-fluid .right .title h4 {
-  font-size: 26px;
-  line-height: 35px;
+  font-size: 28px;
+  line-height: 38px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetPastor .pastor .container-fluid .right .title h4 {
     line-height: 25px;
+    line-height: 33px;
   }
 }
 
@@ -399,7 +452,7 @@ footer .container-fluid .black .bottom p {
   margin-top: 15px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetPastor .pastor .container-fluid .right .btn {
     margin: 15px auto 0 auto;
   }
@@ -410,14 +463,23 @@ footer .container-fluid .black .bottom p {
 }
 
 #singlePage .container-fluid {
-  width: 900px;
+  max-width: 900px;
+  width: calc(100% - 50px);
+  padding: 0 25px;
 }
 
 #singlePage .container-fluid h2 {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 32px;
+  line-height: 42px;
   margin: 0;
   padding: 50px 0;
+}
+
+@media (max-width: 550px) {
+  #singlePage .container-fluid h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
 }
 
 #singlePage .container-fluid .content {
@@ -577,6 +639,12 @@ footer .container-fluid .black .bottom p {
   padding: 50px 0 0 0;
 }
 
+@media (max-width: 550px) {
+  #contnetGalleryHome {
+    padding: 25px 0 0 0;
+  }
+}
+
 #contnetGalleryHome .gallery h2 {
   text-align: center;
   padding: 0 0 50px 0;
@@ -650,6 +718,12 @@ footer .container-fluid .black .bottom p {
   height: 120px;
 }
 
+@media (max-width: 650px) {
+  #contnetRedesSociales .container-fluid .redSocial {
+    width: 100%;
+  }
+}
+
 #contnetRedesSociales .container-fluid .redSocial .image {
   padding-right: 20px;
 }
@@ -695,6 +769,12 @@ footer .container-fluid .black .bottom p {
   padding: 50px 0;
 }
 
+@media (max-width: 550px) {
+  #containerContact {
+    padding: 25px 0;
+  }
+}
+
 #containerContact h2 {
   margin: 0;
   text-align: center;
@@ -710,6 +790,12 @@ footer .container-fluid .black .bottom p {
           justify-content: space-between;
 }
 
+@media (max-width: 550px) {
+  #containerContact .container-fluid {
+    display: block;
+  }
+}
+
 #containerContact .container-fluid .left {
   width: 45%;
   display: -webkit-box;
@@ -722,6 +808,19 @@ footer .container-fluid .black .bottom p {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  #containerContact .container-fluid .left {
+    width: 47%;
+  }
+}
+
+@media (max-width: 550px) {
+  #containerContact .container-fluid .left {
+    width: calc(100% - 30px);
+    padding: 0 15px 25px 15px;
+  }
+}
+
 #containerContact .container-fluid .left .casaPaz {
   width: 42%;
   text-align: center;
@@ -731,6 +830,13 @@ footer .container-fluid .black .bottom p {
   display: table;
   opacity: 0.5;
   min-height: 176px;
+}
+
+@media (max-width: 768px) {
+  #containerContact .container-fluid .left .casaPaz {
+    display: inline-block;
+    width: 38%;
+  }
 }
 
 #containerContact .container-fluid .left .casaPaz h3 {
@@ -775,6 +881,18 @@ footer .container-fluid .black .bottom p {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  #containerContact .container-fluid .right {
+    width: 47%;
+  }
+}
+
+@media (max-width: 550px) {
+  #containerContact .container-fluid .right {
+    width: 100%;
+  }
+}
+
 #containerContact .container-fluid .right #map {
   width: 100%;
   min-height: 50vh;
@@ -813,7 +931,7 @@ footer .container-fluid .black .bottom p {
 }
 
 .archivePage .container-fluid .content .item .background h3 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .archivePage .container-fluid .content .item .background .button {
@@ -968,11 +1086,10 @@ footer .container-fluid .black .bottom p {
           justify-content: start;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetEvents .container-fluid > div {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0 15px;
   }
 }
 
@@ -982,7 +1099,7 @@ footer .container-fluid .black .bottom p {
   padding: 0 30px 0 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetEvents .container-fluid > div .left {
     width: 100%;
     border-right: none;
@@ -1042,7 +1159,7 @@ footer .container-fluid .black .bottom p {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetEvents .container-fluid > div .left .item h4 {
     width: 150px;
   }
@@ -1058,14 +1175,14 @@ footer .container-fluid .black .bottom p {
   padding: 0 0 0 30px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetEvents .container-fluid > div .right {
     padding: 30px 0 0 0;
     width: 100%;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   #contnetEvents .container-fluid > div .right > p {
     font-weight: bold;
   }
@@ -1164,6 +1281,7 @@ footer .container-fluid .black .bottom p {
   padding: 4px 0px 4px 4px;
   bottom: 0;
   left: 0;
+  z-index: 100;
 }
 
 #radioOnline .icon {
@@ -1187,7 +1305,17 @@ footer .container-fluid .black .bottom p {
 }
 
 h2, h3, h4, h5 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Bree Serif', serif;
+}
+
+#menuMobile {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  #menuMobile {
+    display: block;
+  }
 }
 
 #menuMobile .navbar-menu {
@@ -1246,7 +1374,7 @@ h2, h3, h4, h5 {
   position: fixed;
   top: 25px;
   right: 20px;
-  background-color: #262626;
+  background-color: #cf0453;
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -1311,6 +1439,10 @@ h2, h3, h4, h5 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 0;
+}
+
+body #menuMobile .menu {
+  top: 13px;
 }
 
 @media only screen and (max-width: 804px) {

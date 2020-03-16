@@ -63,7 +63,7 @@
         <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
         <script type="text/javascript">
         MRP.insert({
-            'url':'http://server.laradio.online:9114/',
+            'url':'http://212.83.138.48:8526/stream',
             'lang':'es',
             'codec':'aac',
             'volume':100,
@@ -74,7 +74,8 @@
             'wmode':'transparent',
             'skin':'faredirfare',
             'width':269,
-            'height':52
+            'height':52,
+            // 'muted' : 'muted'
         });
         </script>
         <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->

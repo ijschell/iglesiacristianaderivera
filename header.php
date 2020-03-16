@@ -24,6 +24,16 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/libs/tooltip/tooltipster.bundle.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/libs/tooltip/tooltipster.main.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33862564-11"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-33862564-11');
+	</script>
 	
 </head>
 <body id="header">
